@@ -1,0 +1,29 @@
+<svg width="400" height="600" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Glowing Background -->
+  <rect width="400" height="600" rx="20" fill="url(#paint0_linear)"/>
+  
+  <!-- Charger Main Body -->
+  <rect x="140" y="100" width="120" height="400" rx="16" fill="#1A2235" stroke="#3A4660" stroke-width="4"/>
+  <rect x="150" y="110" width="100" height="380" rx="12" fill="#0D1322"/>
+  
+  <!-- Charger Screen -->
+  <rect x="160" y="150" width="80" height="100" rx="8" fill="#00D46A" fill-opacity="0.1" stroke="#00D46A" stroke-width="2"/>
+  
+  <!-- Charging Status Circle -->
+  <circle cx="200" cy="200" r="20" fill="#00D46A"/>
+  <circle cx="200" cy="200" r="30" stroke="#00D46A" stroke-width="2" stroke-dasharray="4 4" class="spin"/>
+  
+  <!-- Cable -->
+  <path d="M260 300 C 300 300, 320 350, 320 400" stroke="#3A4660" stroke-width="8" fill="none"/>
+  <rect x="300" y="400" width="40" height="60" rx="8" fill="#1A2235" stroke="#3A4660" stroke-width="4"/>
+  
+  <!-- Base -->
+  <rect x="120" y="500" width="160" height="20" rx="4" fill="#3A4660"/>
+
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="400" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#030C1A" stop-opacity="0"/>
+      <stop offset="1" stop-color="#00D46A" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,7 @@
+<svg width="800" height="800" viewBox="0 0 800 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" rx="40" fill="#030C1A"/>
+  <path d="M 0 400 Q 400 0 800 400 T 800 800" stroke="#00D46A" stroke-width="2" stroke-opacity="0.2" fill="none"/>
+  <path d="M 0 500 Q 400 100 800 500" stroke="#00E5FF" stroke-width="2" stroke-opacity="0.2" fill="none"/>
+  <circle cx="400" cy="400" r="100" fill="#00D46A" fill-opacity="0.1"/>
+  <text x="400" y="410" font-family="sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">CITA Tech Hub</text>
+</svg>

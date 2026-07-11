@@ -1,0 +1,142 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all var(--transition-normal);
+  background-color: transparent;
+  padding: 1.5rem 0;
+}
+
+.scrolled {
+  background-color: var(--background-white);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1400px; /* Wider container just for header to fit 8 links */
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  display: block;
+  flex-shrink: 0;
+}
+
+.desktopNav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .desktopNav {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+.navList {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  align-items: center;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.scrolled .navLink {
+  color: var(--primary-color);
+}
+
+.navLink:hover {
+  color: var(--secondary-color) !important;
+}
+
+.dropdownIcon {
+  margin-top: 2px;
+}
+
+.actions {
+  display: none;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .actions {
+    display: flex;
+  }
+}
+
+.mobileToggle {
+  display: block;
+  color: var(--text-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.scrolled .mobileToggle {
+  color: var(--primary-color);
+}
+
+@media (min-width: 1024px) {
+  .mobileToggle {
+    display: none;
+  }
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-white);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-lg);
+  border-top: 1px solid var(--border-color);
+}
+
+.mobileNavList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.mobileNavLink {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mobileActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}

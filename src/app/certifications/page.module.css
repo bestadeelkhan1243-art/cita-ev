@@ -1,0 +1,211 @@
+.page {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #050e1d;
+  color: white;
+  padding-bottom: 80px;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 5%;
+  background: linear-gradient(135deg, #081A33 0%, #050e1d 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ffffff, #00D46A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Certifications display grid */
+.certSection {
+  padding: 80px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+  background: linear-gradient(to right, #ffffff, #00B7FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.certText {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.certGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.certCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.certCard:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(0, 212, 106, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 212, 106, 0.05);
+}
+
+.certBadge {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #00D46A;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+.certCard h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.certCard p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.5;
+}
+
+/* Downloads Section */
+.downloadSection {
+  padding: 80px 5%;
+  background: rgba(255, 255, 255, 0.01);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.downloadContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.downloadTableWrapper {
+  overflow-x: auto;
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.downloadTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 800px;
+}
+
+.downloadTable th {
+  padding: 20px 24px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.downloadTable td {
+  padding: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
+.downloadTable tr:last-child td {
+  border-bottom: none;
+}
+
+.docName {
+  font-weight: 600;
+  color: white;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.docDesc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.categoryTag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: rgba(0, 183, 255, 0.1);
+  color: #00B7FF;
+  border: 1px solid rgba(0, 183, 255, 0.2);
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #00D46A;
+  color: #050e1d;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.downloadBtn:hover {
+  background: #00ea75;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+}
