@@ -163,19 +163,19 @@
 
 .specCardGreen {
   background-color: var(--secondary-color); /* CITA EV Logo Electric Green */
-  color: #ffffff; /* White text so it looks good! */
+  color: #ffffff;
   border-radius: var(--radius-lg);
   padding: 2.5rem 2rem;
   box-shadow: 0 15px 35px rgba(0, 212, 106, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: transform var(--transition-fast);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .specCardGreen:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 45px rgba(0, 212, 106, 0.3);
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0, 212, 106, 0.4);
 }
 
 .specCardGreen h2 {
@@ -200,12 +200,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: transform var(--transition-fast);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(255,255,255,0.05);
 }
 
 .specCardDark:hover {
-  transform: translateY(-5px);
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(8, 26, 51, 0.4);
 }
 
 .specCardDark h2 {
@@ -215,9 +216,117 @@
   font-weight: 800;
 }
 
+.specCardD.marqueeDot {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
 .specCardDark p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.1rem;
+}
+
+.specCardBlue {
+  background: linear-gradient(145deg, #0070F3 0%, #0051B3 100%);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 15px 35px rgba(0, 112, 243, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.specCardBlue:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0, 112, 243, 0.4);
+}
+
+.specCardBlue h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin: 1rem 0 0.25rem 0;
+  font-weight: 800;
+}
+
+.specCardBlue p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+/* TABS STYLES FOR SPECS */
+.tabsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.tabInactive {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.tabInactive:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.tabActive {
+  background: rgba(0, 212, 106, 0.05);
+  border: 1.5px solid var(--secondary-color);
+  padding: 12px 24px;
+  border-radius: 999px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 212, 106, 0.15);
+  letter-spacing: 0.5px;
+}
+
+.tabContentCard {
+  background: linear-gradient(145deg, #0f172a 0%, #020617 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabContentCard h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 15px 0 5px 0;
+  color: white;
+}
+
+.tabContentCard p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* TRUST SECTION */
@@ -487,6 +596,7 @@
 .marqueeTrack {
   display: flex;
   align-items: center;
+  gap: 20px;
   width: max-content;
   animation: scrollText 30s linear infinite;
 }
@@ -495,18 +605,25 @@
   animation-play-state: paused;
 }
 
-.marqueeText {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: 700;
+.industryTab {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 12px 28px;
+  border-radius: 999px; /* Round pill shape */
   color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   white-space: nowrap;
-  padding: 0 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
 }
 
-.marqueeDot {
+.industryTab:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 15px rgba(0, 212, 106, 0.15);
+  transform: translateY(-2px);
   color: var(--secondary-color);
-  font-size: 2rem;
-  line-height: 1;
 }
 
 @keyframes scrollText {

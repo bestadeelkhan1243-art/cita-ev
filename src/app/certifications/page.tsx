@@ -1,14 +1,14 @@
 "use client";
 
-import React from "react";
-import { motion, Variants } from "framer-motion";
-import { Download, ShieldCheck } from "lucide-react";
+import React, { useState } from "react";
+import { motion, Variants, AnimatePresence } from "framer-motion";
+import { Download, ShieldCheck, Award } from "lucide-react";
 import styles from "./page.module.css";
 
 const certifications = [
-  { badge: "CE", title: "CE Certification", desc: "European conformity standards for health, safety and environmental protection." },
+  { badge: "CE CERTIFIED", title: "CE Certification", desc: "European conformity standards for health, safety and environmental protection." },
   { badge: "UKCA", title: "UKCA Certification", desc: "United Kingdom Conformity Assessed marking for product safety." },
-  { badge: "OCPP", title: "OCPP Compliant", desc: "Open Charge Point Protocol for seamless charger-to-platform communication." },
+  { badge: "OCPP 1.6J", title: "OCPP Compliant", desc: "Open Charge Point Protocol for seamless charger-to-platform communication." },
   { badge: "IEC", title: "IEC Compliance", desc: "International Electrotechnical Commission standards for electrical equipment." },
   { badge: "TÜV", title: "TÜV Certified", desc: "Independent verification of product quality, safety and reliability." },
 ];
@@ -28,6 +28,8 @@ const stagger: Variants = {
 };
 
 export default function CertificationsPage() {
+  const [activeTab, setActiveTab] = useState(0);
+
   return (
     <main className={styles.page}>
 
@@ -41,7 +43,7 @@ export default function CertificationsPage() {
         </motion.div>
       </section>
 
-      {/* CERTIFICATIONS GRID */}
+      {/* CERTIFICATIONS TABS */}
       <section className={styles.certSection}>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp}>
           <h2 className={styles.sectionTitle}>Our Certifications</h2>
@@ -50,14 +52,33 @@ export default function CertificationsPage() {
           </p>
         </motion.div>
 
-        <motion.div className={styles.certGrid} variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }}>
-          {certifications.map((cert, i) => (
-            <motion.div key={i} className={styles.certCard} variants={fadeUp}>
-              <div className={styles.certBadge}>{cert.badge}</div>
-              <h3>{cert.title}</h3>
-              <p>{cert.desc}</p>
+        <motion.div variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <div className={styles.tabsContainer}>
+            {certifications.map((cert, i) => (
+              <button 
+                key={i} 
+                className={activeTab === i ? styles.tabActive : styles.tabInactive}
+                onClick={() => setActiveTab(i)}
+              >
+                {activeTab === i ? <Award size={18} color="var(--secondary-color)" /> : <ShieldCheck size={18} color="rgba(255,255,255,0.5)" />}
+                {cert.badge}
+              </button>
+            ))}
+          </div>
+
+          <AnimatePresence mode="wait">
+            <motion.div 
+              key={activeTab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className={styles.tabContentCard}
+            >
+              <h3>{certifications[activeTab].title}</h3>
+              <p>{certifications[activeTab].desc}</p>
             </motion.div>
-          ))}
+          </AnimatePresence>
         </motion.div>
       </section>
 

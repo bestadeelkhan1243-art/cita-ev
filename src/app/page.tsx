@@ -163,13 +163,13 @@ export default function Home() {
             </motion.div>
 
             <motion.div 
-              className={styles.specCardDark}
+              className={styles.specCardBlue}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <ShieldCheck size={36} color="var(--secondary-color)" className={styles.specIcon} />
+              <ShieldCheck size={36} color="#ffffff" className={styles.specIcon} />
               <h2>OCPP 1.6J</h2>
               <p>Smart integration</p>
             </motion.div>
@@ -328,7 +328,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. INDUSTRIES TEXT TICKER */}
+      {/* 5. INDUSTRIES TABS SLIDER */}
       <section className={styles.sectionLight} style={{ padding: '3rem 0', overflow: 'hidden' }}>
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
            <span style={{ fontSize: '0.75rem', letterSpacing: '3px', color: 'var(--text-secondary)', textTransform: 'uppercase', fontWeight: 600 }}>
@@ -353,10 +353,9 @@ export default function Home() {
               "Residential Buildings", 
               "Public Infrastructure"
             ].map((text, i) => (
-              <React.Fragment key={i}>
-                <span className={styles.marqueeText}>{text}</span>
-                <span className={styles.marqueeDot}>•</span>
-              </React.Fragment>
+              <span key={i} className={styles.industryTab}>
+                {text}
+              </span>
             ))}
           </div>
         </div>
@@ -370,34 +369,34 @@ export default function Home() {
             <p className={styles.sectionSubtitle}>Discover our most popular EV charging models in Pakistan.</p>
           </motion.div>
           <div className={styles.categoryGrid}>
-             <motion.div className={styles.categoryCard} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUpVariant}>
+              <motion.div className={styles.categoryCard} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUpVariant}>
                 <div className={styles.categoryImageWrapper}>
-                  <Image unoptimized src="/products/Ecoo-Series.png" alt="Smart 7 Eco" fill className={styles.categoryImage} />
+                  <Image unoptimized src="https://citaevcharger.co.uk/wp-content/uploads/2024/08/Group-2119-1.png" alt="Smart 7" fill className={styles.categoryImage} style={{ objectFit: 'contain' }} />
                 </div>
                 <div className={styles.categoryContent}>
-                  <h3>Smart 7 Eco</h3>
-                  <p>7.4kW single-phase charger ideal for home use.</p>
-                  <Button variant="outlineWhite" size="sm" href="/products/smart-7-eco">Learn More</Button>
+                  <h3>Smart 7</h3>
+                  <p>7kW single-phase charger ideal for home use.</p>
+                  <Button variant="outlineWhite" size="sm" href="/products/smart-7">View Details</Button>
                 </div>
               </motion.div>
               <motion.div className={styles.categoryCard} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUpVariant}>
                 <div className={styles.categoryImageWrapper}>
-                  <Image unoptimized src="/products/Dual-Smart.png" alt="Smart 22 Pro" fill className={styles.categoryImage} />
+                  <Image unoptimized src="https://citaevcharger.co.uk/wp-content/uploads/2024/10/CITA-Smart-22kW-AC-EV-Charger-CITA-EV-Charger.png" alt="Smart 22" fill className={styles.categoryImage} style={{ objectFit: 'contain' }} />
                 </div>
                 <div className={styles.categoryContent}>
-                  <h3>Smart 22 Pro</h3>
+                  <h3>Smart 22</h3>
                   <p>22kW three-phase charger for commercial deployment.</p>
-                  <Button variant="outlineWhite" size="sm" href="/products/smart-22-pro">Learn More</Button>
+                  <Button variant="outlineWhite" size="sm" href="/products/smart-22">View Details</Button>
                 </div>
               </motion.div>
               <motion.div className={styles.categoryCard} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUpVariant}>
                 <div className={styles.categoryImageWrapper}>
-                  <Image unoptimized src="/products/DC-30.png" alt="Smart 80 DC" fill className={styles.categoryImage} />
+                  <Image unoptimized src="https://citaevcharger.co.uk/wp-content/uploads/2024/11/Group-2426.png" alt="Smart 80 DC" fill className={styles.categoryImage} style={{ objectFit: 'contain' }} />
                 </div>
                 <div className={styles.categoryContent}>
                   <h3>Smart 80 DC</h3>
                   <p>80kW dual-gun fast charger for highways and fleets.</p>
-                  <Button variant="outlineWhite" size="sm" href="/products/smart-80-dc">Learn More</Button>
+                  <Button variant="outlineWhite" size="sm" href="/products/smart-80-dc">View Details</Button>
                 </div>
               </motion.div>
           </div>

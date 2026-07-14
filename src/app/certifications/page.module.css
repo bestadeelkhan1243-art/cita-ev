@@ -70,48 +70,74 @@
   margin: 0 auto 60px;
 }
 
-.certGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+.tabsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
 }
 
-.certCard {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 40px 30px;
-  border-radius: 20px;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.certCard:hover {
-  transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(0, 212, 106, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 212, 106, 0.05);
-}
-
-.certBadge {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #00D46A;
-  margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 1px;
-}
-
-.certCard h3 {
-  font-size: 1.3rem;
+.tabInactive {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.tabInactive:hover {
+  background: rgba(255, 255, 255, 0.08);
   color: white;
 }
 
-.certCard p {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.5;
+.tabActive {
+  background: rgba(0, 212, 106, 0.05); /* Very slight green tint */
+  border: 1.5px solid var(--secondary-color);
+  padding: 12px 24px;
+  border-radius: 999px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 212, 106, 0.15);
+  letter-spacing: 0.5px;
+}
+
+.tabContentCard {
+  background: linear-gradient(145deg, #0f172a 0%, #020617 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.tabContentCard h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.tabContentCard p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
 }
 
 /* Downloads Section */
