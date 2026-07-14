@@ -371,7 +371,7 @@ export default function Home() {
           <div className={styles.categoryGrid}>
               <motion.div className={styles.categoryCard} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUpVariant}>
                 <div className={styles.categoryImageWrapper}>
-                  <Image unoptimized src="https://citaevcharger.co.uk/wp-content/uploads/2024/08/Group-2119-1.png" alt="Smart 7" fill className={styles.categoryImage} style={{ objectFit: 'contain' }} />
+                  <Image unoptimized src="/products/Smart 7.png" alt="Smart 7" fill className={styles.categoryImage} style={{ objectFit: 'contain' }} />
                 </div>
                 <div className={styles.categoryContent}>
                   <h3>Smart 7</h3>
@@ -381,7 +381,7 @@ export default function Home() {
               </motion.div>
               <motion.div className={styles.categoryCard} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUpVariant}>
                 <div className={styles.categoryImageWrapper}>
-                  <Image unoptimized src="https://citaevcharger.co.uk/wp-content/uploads/2024/10/CITA-Smart-22kW-AC-EV-Charger-CITA-EV-Charger.png" alt="Smart 22" fill className={styles.categoryImage} style={{ objectFit: 'contain' }} />
+                  <Image unoptimized src="/products/Smart-22-Transparent.png" alt="Smart 22" fill className={styles.categoryImage} style={{ objectFit: 'contain' }} />
                 </div>
                 <div className={styles.categoryContent}>
                   <h3>Smart 22</h3>
@@ -391,7 +391,7 @@ export default function Home() {
               </motion.div>
               <motion.div className={styles.categoryCard} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUpVariant}>
                 <div className={styles.categoryImageWrapper}>
-                  <Image unoptimized src="https://citaevcharger.co.uk/wp-content/uploads/2024/11/Group-2426.png" alt="Smart 80 DC" fill className={styles.categoryImage} style={{ objectFit: 'contain' }} />
+                  <Image unoptimized src="/products/CITA-EV-DC-Charger.png" alt="Smart 80 DC" fill className={styles.categoryImage} style={{ objectFit: 'contain' }} />
                 </div>
                 <div className={styles.categoryContent}>
                   <h3>Smart 80 DC</h3>
