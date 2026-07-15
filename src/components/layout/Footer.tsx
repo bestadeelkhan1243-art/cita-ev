@@ -44,9 +44,13 @@ export const Footer = () => {
           <div className={styles.colContact}>
             <h4 className={styles.title}>Contact Us</h4>
             <ul className={styles.linkList}>
-              <li>Phone: 0300-1002226</li>
-              <li>WhatsApp: 0300-1002226</li>
-              <li>Email: contact@citaevchargers.com</li>
+              <li>Phone: 0300-1002226, 0300-2929616</li>
+              <li>WhatsApp: 0300-1002226, 0300-2929616</li>
+              <li>Email: contact@superfastevcharger.com</li>
+              <li style={{ marginTop: '10px', lineHeight: '1.5' }}>
+                <strong>Head Office Address:</strong><br />
+                Office No 810 Level 8 HI Q Towers, Jail Road Lahore, Punjab, Pakistan
+              </li>
             </ul>
           </div>
         </div>

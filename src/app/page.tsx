@@ -97,7 +97,7 @@ export default function Home() {
                     key={`white-${index}`}
                     initial={{ opacity: 0, display: 'none' }}
                     animate={{ opacity: 1, display: 'inline' }}
-                    transition={{ delay: 0.5 + index * 0.05, duration: 0.1 }}
+                    transition={{ delay: 0.5 + index * 0.12, duration: 0.15 }}
                   >
                     {char}
                   </motion.span>
@@ -108,7 +108,7 @@ export default function Home() {
                       key={`green-${index}`}
                       initial={{ opacity: 0, display: 'none' }}
                       animate={{ opacity: 1, display: 'inline' }}
-                      transition={{ delay: 0.5 + (String(heroSlides[currentSlide].title).length + index) * 0.05, duration: 0.1 }}
+                      transition={{ delay: 0.5 + (String(heroSlides[currentSlide].title).length + index) * 0.12, duration: 0.15 }}
                     >
                       {char}
                     </motion.span>
@@ -119,7 +119,7 @@ export default function Home() {
                 className={styles.heroSubtitle}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.5, duration: 0.8 }}
+                transition={{ delay: 3.5, duration: 1.0 }}
               >
                 {heroSlides[currentSlide].subtitle}
               </motion.p>

@@ -649,7 +649,7 @@
   .hero {
     background: #111;
   }
-  .heroContainer, .introContainer {
+  .heroContainer, .introContainer, .splitSection, .splitSectionAlt {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 40px;
@@ -661,8 +661,40 @@
     padding-left: 0;
     height: 350px;
   }
-  .quoteLink {
+  .quoteLink, .learnMoreLink {
     margin: 10px auto 0;
+  }
+  .splitImageContainerLight, .splitImageContainerDark {
+    min-height: 300px;
+    order: -1; /* Push images above text on mobile */
+  }
+  .splitTextContainer, .splitTextContainerBlue, .splitTextContainerGreen {
+    padding: 40px 20px;
+    align-items: center;
+  }
+  .splitList li {
+    text-align: left;
+  }
+  .appStores {
+    justify-content: center;
+  }
+  .warrantyContent {
+    padding: 40px 20px;
+  }
+  .warrantyContent h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .productName, .heroHeadline {
+    font-size: 2.5rem;
+  }
+  .splitTitle {
+    font-size: 1.8rem;
+  }
+  .hero {
+    padding: 120px 5% 80px;
   }
 }
 

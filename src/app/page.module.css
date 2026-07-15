@@ -606,24 +606,24 @@
 }
 
 .industryTab {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--secondary-color);
+  border: 1px solid transparent;
   padding: 12px 28px;
   border-radius: 999px; /* Round pill shape */
-  color: var(--primary-color);
+  color: #ffffff;
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   white-space: nowrap;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 15px rgba(0, 212, 106, 0.2);
   transition: all 0.3s ease;
 }
 
 .industryTab:hover {
-  border-color: var(--secondary-color);
-  box-shadow: 0 0 15px rgba(0, 212, 106, 0.15);
+  background: var(--primary-color);
+  box-shadow: 0 0 15px rgba(0, 212, 106, 0.4);
   transform: translateY(-2px);
-  color: var(--secondary-color);
+  color: #ffffff;
 }
 
 @keyframes scrollText {
